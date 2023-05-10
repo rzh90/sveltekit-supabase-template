@@ -5,7 +5,7 @@
 4. Click **User Management Starter** under **Quick start**.
 5. Click **Run**.
 6. Go to the [URL configuration](https://app.supabase.com/project/_/auth/url-configuration) by selecting **Authentication** > **URL Configuration**.
-7. Change the **Site URL** to `http://localhost:5173` and add `http://localhost:5173` to the **Redirect URLS**.
+7. Change the **Site URL** to `http://localhost:5173` and add `http://localhost:5173` to the **Redirect URLs**.
 
 ## Create the repo
 1. Clone the repo.
