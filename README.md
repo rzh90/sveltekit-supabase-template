@@ -1,4 +1,4 @@
-# Set up the database
+## Set up the database
 1. Create a new project on [Supabase](https://app.supabase.com/).
 2. Enter the project details and wait for the database to launch.
 3. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) page in the dashboard.
