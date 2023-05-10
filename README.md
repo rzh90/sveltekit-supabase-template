@@ -3,7 +3,9 @@
 2. Enter the project details and wait for the database to launch.
 3. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) page in the dashboard.
 4. Click **User Management Starter** under **Quick start**.
-3. Click **Run**.
+5. Click **Run**.
+6. Go to the [URL configuration](https://app.supabase.com/project/_/auth/url-configuration) by selecting **Authentication** > **URL Configuration**.
+7. Change the **Site URL** to `http://localhost:5173` and add `http://localhost:5173` to the **Redirect URLS**.
 
 ## Create the repo
 1. Clone the repo.
