@@ -1,3 +1,6 @@
+# SvelteKit + Supabase template
+SvelteKit setup with Supabase magic link auth
+
 ## Set up the database
 1. Create a new project on [Supabase](https://app.supabase.com/).
 2. Enter the project details and wait for the database to launch.
