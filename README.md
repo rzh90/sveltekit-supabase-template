@@ -1,8 +1,15 @@
+# Set up the database
+1. Create a new project on [Supabase](https://app.supabase.com/).
+2. Enter the project details and wait for the database to launch.
+3. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) page in the dashboard.
+4. Click **User Management Starter** under **Quick start**.
+3. Click **Run**.
+
 ## Create the repo
 1. Clone the repo.
 2. Copy the `.env.example` file in the root directory and rename it `.env`.
 3. Go to [Supabase](https://supabase.com/) and open the project.
-4. Go to **Project Settings** > **API** to find the **project URL** and **anon API key**. Add them to the .env file.
+4. Go to the [API Settings](https://app.supabase.com/project/_/settings/api) by selecting **Project Settings** > **API** to find the `project URL` and `anon API key`. Add them to the `.env` file.
 ```
 NEXT_PUBLIC_SUPABASE_URL=project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=anon API key
