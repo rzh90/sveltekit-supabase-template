@@ -5,7 +5,7 @@
   <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white"></a>
 </div>
 
-## Set up the database
+## Set up the project and users
 1. Create a new project on [Supabase](https://app.supabase.com/).
 2. Enter the project details and wait for the database to launch.
 3. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) page in the dashboard.
@@ -13,6 +13,11 @@
 5. Click **Run**.
 6. Go to the [URL configuration](https://app.supabase.com/project/_/auth/url-configuration) by selecting **Authentication** > **URL Configuration**.
 7. Change the **Site URL** to `http://localhost:5173` and add `http://localhost:5173` to the **Redirect URLs**.
+
+## Set up the database
+1. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) page in the [Supabase](https://app.supabase.com/) dashboard.
+2. Click **Todo List** under **Quick start**.
+3. Click **Run**.
 
 ## Create the repo
 1. Clone the repo.
