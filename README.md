@@ -29,5 +29,5 @@ NEXT_PUBLIC_SUPABASE_URL=project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=anon API key
 ```
 5. Open a terminal and type `npm i` or `npm install` and press Enter.
-6. Use `npm run dev` to start the server.
+6. Type `npm run dev` in the terminal and press Enter to start the server.
 7. Open http://localhost:5173/ with your browser to see the result.
