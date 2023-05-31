@@ -1,6 +1,7 @@
 <div align="center">
   <h1>SvelteKit + Supabase template</h1>
-  <p>SvelteKit with Supabase magic link auth template<p>
+  <p>SvelteKit with Supabase email and password auth template<p>
+  <p>From <a href="https://github.com/supabase/auth-helpers/tree/main/examples/sveltekit">https://github.com/supabase/auth-helpers/tree/main/examples/sveltekit</a></p>
   <a href="https://kit.svelte.dev/"><img src="https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=Svelte&logoColor=white"></a>
   <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white"></a>
 </div>

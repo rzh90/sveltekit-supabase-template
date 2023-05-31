@@ -2,12 +2,6 @@ import { AuthApiError } from "@supabase/supabase-js"
 import { fail, redirect } from "@sveltejs/kit"
 
 export const actions = {
-    // async default({
-    //     request,
-    //     locals: { supabase }
-    // }): Promise<ActionFailure<{ error; values?: { email } }>> {
-    //     const formData = await request.formData()
-
     default: async ({ request, locals: { supabase } }) => {
         const formData = await request.formData()
 
