@@ -25,7 +25,7 @@
 </script>
 
 <svelte:head>
-    <title>Supabase Auth Helpers Demo</title>
+    <title>SvelteKit + Supabase template</title>
 </svelte:head>
 
 <slot />

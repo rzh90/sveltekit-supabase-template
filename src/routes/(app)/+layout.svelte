@@ -5,7 +5,7 @@
 
     let loading = false
 
-    const handleLogout = () => {
+    function handleLogout() {
         loading = true
         return async ({ result }) => {
             if (result.type === "redirect") {
@@ -18,22 +18,13 @@
     }
 </script>
 
-<svelte:head>
-    <title>Email and Password Demo - Supabase Auth Helpers</title>
-</svelte:head>
-
-<main class="container is-max-desktop">
-    <div class="navbar-menu my-4">
-        <div class="navbar-start">
-            <a class="my-2" href="/">Supabase Auth Helpers Demo</a>
-        </div>
-        <div class="navbar-end">
-            {#if $page.data.session}
-                <form action="/logout" method="post" use:enhance={handleLogout}>
-                    <button disabled={loading} type="submit">Sign out</button>
-                </form>
-            {/if}
-        </div>
+<main>
+    <div>
+        {#if $page.data.session}
+            <form action="/logout" method="post" use:enhance={handleLogout}>
+                <button disabled={loading} type="submit">Sign out</button>
+            </form>
+        {/if}
     </div>
 
     <slot />

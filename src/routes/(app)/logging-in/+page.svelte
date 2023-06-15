@@ -13,16 +13,16 @@
     }
 </script>
 
-<section class="hero is-fullheight">
+<section>
     <!-- Hero head: will stick at the top -->
-    <div class="hero-head">
+    <div>
         <progress class="progress is-small is-info" max="100" />
     </div>
 
     <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <em class="subtitle">
+    <div>
+        <div>
+            <em>
                 Logging in
             </em>
         </div>

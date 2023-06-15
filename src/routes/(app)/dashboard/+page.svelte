@@ -5,15 +5,23 @@
 <script>
     export let data
     
-    $: ({ testTable, user } = data)
+    $: ({ dataTable, user } = data)
 </script>
 
-<div class="block">
-    <p>Protected content for {user.email}</p>
-    <p>server-side fetched data with RLS:</p>
-    <pre>{JSON.stringify(testTable, null, 2)}</pre>
-</div>
-<div class="block">
-    <p>user:</p>
-    <pre>{JSON.stringify(user, null, 2)}</pre>
-</div>
+<p>Hi {user.email}</p>
+<p><a href="/dashboard/add">Add a task</a></p>
+
+{#if dataTable.length}
+    {#each dataTable as todo}
+        <div>
+            <h2>{todo.task}</h2>
+            <p>Added {todo.inserted_at.slice(0, 10)}</p>
+            <h3>Done?</h3>
+            <p>{#if todo.is_complete} Yes {:else} No {/if}</p>
+            <p><a href={`/dashboard/edit/${todo.id}`}>Edit</a></p>
+        </div>
+    {/each}
+
+{:else}
+    <p>No data</p>
+{/if}

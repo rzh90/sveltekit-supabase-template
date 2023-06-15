@@ -1,13 +1,18 @@
 <script>
     import { applyAction, enhance } from "$app/forms"
+    import { invalidate } from "$app/navigation"
 
     export let form
     let loading = false
 
-    const handleSubmit = () => {
+    function handleSubmit() {
         loading = true
         return async ({ result }) => {
-            await applyAction(result)
+            if (result.type === "redirect") {
+                await invalidate("supabase:auth")
+            } else {
+                await applyAction(result)
+            }
             loading = false
         }
     }
@@ -15,12 +20,9 @@
 
 <section>
     <div>
-        <h1>Sign up</h1>
+        <h1>Sign in</h1>
         {#if form?.error}
             <div>{form.error}</div>
-        {/if}
-        {#if form?.message}
-            <div>{form.message}</div>
         {/if}
         <form method="post" use:enhance={handleSubmit}>
             <div>
@@ -37,14 +39,14 @@
             </div>
             <div>
                 <p>
-                    <button disabled={loading}>Sign up</button>
+                    <button disabled={loading}>Sign in</button>
                 </p>
             </div>
         </form>
 
         <div>
             <p>
-                Already have an account? <a href="/signin">Sign in</a>
+                Don't have an account? <a href="/signup">Sign up</a>
             </p>
         </div>
     </div>
