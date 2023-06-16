@@ -5,7 +5,7 @@
   <a href="https://kit.svelte.dev/"><img src="https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=Svelte&logoColor=white"></a>
   <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white"></a>
   <a href="https://skeleton.dev/"><img src="https://img.shields.io/badge/Skeleton UI-0fba81?style=for-the-badge&logoColor=white"></a>
-  <a href="https://skeleton.dev/"><img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"></a>
 </div>
 
 ## Set up the project and users
