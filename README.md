@@ -24,6 +24,8 @@
 
 ## Create the repo
 1. Clone the repo in VS Code.
+    1. Select **Use this template** > **Create a new repository** on this branch on GitHub.
+    2. In VS Code, go to **Source Control** > **Clone Repository** > **Clone from GitHub** and select your new repository.
 2. Make a copy of the `.env.example` file in the root directory and rename it `.env`.
 3. Go to [Supabase](https://supabase.com/) and open the project.
 4. Go to the [API Settings](https://app.supabase.com/project/_/settings/api) by selecting **Project Settings** > **API** to find the `project URL` and `anon API key`. Add them to the `.env` file.
