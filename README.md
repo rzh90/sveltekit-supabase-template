@@ -5,7 +5,7 @@
     <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white"></a>
 </div>
 
-To use, select one of the branches and follow the instructions.
+To use, select a branch and follow the instructions.
 
 *  **email-password** branch for email + password auth
 *  **email-skeletonui** branch for email + password auth with Skeleton UI and Tailwind CSS styling
