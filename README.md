@@ -21,7 +21,7 @@
 3. Click **Run**.
 
 ## Create the repo
-1. Clone the repo.
+1. Clone the repo in VS Code.
 2. Make a copy of the `.env.example` file in the root directory and rename it `.env`.
 3. Go to [Supabase](https://supabase.com/) and open the project.
 4. Go to the [API Settings](https://app.supabase.com/project/_/settings/api) by selecting **Project Settings** > **API** to find the `project URL` and `anon API key`. Add them to the `.env` file.
@@ -29,6 +29,6 @@
 NEXT_PUBLIC_SUPABASE_URL=project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=anon API key
 ```
-5. Open a terminal and type `npm i` or `npm install` and press Enter.
+5. Open a terminal in VS Code (**View** > **Terminal**) and type `npm i` or `npm install` and press Enter.
 6. Type `npm run dev` in the terminal and press Enter to start the server.
 7. Open http://localhost:5173/ with your browser to see the result.
