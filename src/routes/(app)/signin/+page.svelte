@@ -18,36 +18,34 @@
     }
 </script>
 
-<section>
-    <div>
-        <h1>Sign in</h1>
+<section class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 class="h2">Sign in</h2>
+    </div>
+
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         {#if form?.error}
-            <div>{form.error}</div>
+            <aside class="alert variant-filled-error">{form.error}</aside>
         {/if}
-        <form method="post" use:enhance={handleSubmit}>
+
+        <form method="post" class="space-y-6" use:enhance={handleSubmit}>
+            <label class="label">
+                <span>Email</span>
+                <input id="email" name="email" value={form?.values?.email ?? ''} type="email" placeholder="Email" class="input" required>
+            </label>
+
+            <label class="label">
+                <span>Password</span>
+                <input id="password" name="password" type="password" placeholder="Password" class="input" required>
+            </label>
+
             <div>
-                <label for="email">Email</label>
-                <p>
-                    <input id="email" name="email" value={form?.values?.email ?? ''} type="email" placeholder="Email" required />
-                </p>
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <p>
-                    <input id="password" name="password" type="password" placeholder="Password" required />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <button disabled={loading}>Sign in</button>
-                </p>
+                <button class="btn variant-filled-primary" disabled={loading}>Sign in</button>
             </div>
         </form>
 
-        <div>
-            <p>
-                Don't have an account? <a href="/signup">Sign up</a>
-            </p>
+        <div class="mt-6">
+            <p>Don't have an account? <a href="/signup" class="anchor">Sign up</a></p>
         </div>
     </div>
 </section>

@@ -4,36 +4,36 @@
     $: ({ dataTable, user, id } = data)
 </script>
 
-<section>
-    <div>
-        <h2>Edit task</h2>
+<section class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 class="h2">Edit task</h2>
+    </div>
 
-        {#each dataTable as todo}
-            <div>
-                <form method="post" action="?/edit">
-                    <div>
-                        <label for="task">Task</label>
-                        <p><input id="task" name="task" type="text" value={todo.task} required /></p>
-                    </div>
-                    <div>
-                        <label for="completed">Done?</label>
-                        <p>
-                            <select name="completed" id="completed" value={todo.is_complete.toString()}>
-                                <option value="true">Yes</option>
-                                <option value="false">No</option>
-                            </select>
-                        </p>
-                    </div>
+    {#each dataTable as todo}
+        {#if todo.id == id}
+            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <form method="post" action="?/edit" class="space-y-6">
+                    <label class="label">
+                        <span>Task</span>
+                        <input id="task" name="task" type="text" class="input" value={todo.task} required>
+                    </label>
+                    <label class="label">
+                        <span>Done?</span>
+                        <select name="completed" id="completed" class="select" value={todo.is_complete.toString()}>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </label>
 
-                    <div>
-                        <input type="submit" value="Update">
+                    <div class="flex gap-2">
+                        <input type="submit" value="Update" class="btn variant-filled-primary">
                         <form method="post" action="?/delete">
-                            <button type="submit">Delete</button>
+                            <button type="submit" class="btn variant-filled-error">Delete</button>
                         </form>
-                        <a href="/dashboard">Cancel</a>
+                        <a href="/dashboard" class="btn variant-ghost-secondary">Cancel</a>
                     </div>
                 </form>
             </div>
-        {/each}
-    </div>
+        {/if}
+    {/each}
 </section>

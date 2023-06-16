@@ -8,22 +8,22 @@
     $: ({ dataTable, user } = data)
 </script>
 
-<section>
-    <div>
-        <h2>Add a task</h2>
+<section class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 class="h2">Add task</h2>
+    </div>
 
-        <div>
-            <form method="post" action="?/add">
-                <div>
-                    <label for="task">Task</label>
-                    <p><input id="task" name="task" type="text" required /></p>
-                </div>
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form method="post" action="?/add" class="space-y-6">
+            <label class="label">
+                <span>Task</span>
+                <input id="task" name="task" type="text" class="input" required>
+            </label>
 
-                <div>
-                    <input type="submit" value="Add">
-                    <a href="/dashboard">Cancel</a>
-                </div>
-            </form>
-        </div>
+            <div class="flex gap-2">
+                <input type="submit" value="Add" class="btn variant-filled-primary">
+                <a href="/dashboard" class="btn variant-ghost-secondary">Cancel</a>
+            </div>
+        </form>
     </div>
 </section>

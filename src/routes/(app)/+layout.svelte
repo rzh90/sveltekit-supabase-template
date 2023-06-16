@@ -20,23 +20,26 @@
     }
 </script>
 
-<header>
-    <Nav>
-        {#if $page.data.session}
-                <div>
-                    <p><a href="/dashboard">Dashboard</a></p>
+<header class="p-2 mb-6">
+    <div class="mx-auto max-w-screen-xl">
+        <Nav>
+            {#if $page.data.session}
+                <div class="flex gap-2">
+                    <a href="/dashboard" class="btn btn-sm variant-filled-primary">Dashboard</a>
                     <form action="/logout" method="post" use:enhance={handleLogout}>
-                        <button disabled={loading} type="submit">Sign out</button>
+                        <button disabled={loading} type="submit" class="btn btn-sm variant-ghost-primary">Sign out</button>
                     </form>
                 </div>
             {:else}
-            <div>
-                <p><a href="/signup">Sign up</a></p>
-                <p><a href="/signin">Sign in</a></p>
-            </div>
+                <div class="flex gap-2">
+                    <a href="/signup" class="btn btn-sm variant-filled-primary">Sign up</a>
+                    <a href="/signin" class="btn btn-sm variant-ghost-primary">Sign in</a>
+                </div>
             {/if}
-    </Nav>
+        </Nav>
+    </div>
 </header>
-<main>
+
+<div class="container mx-auto max-w-screen-xl">
     <slot />
-</main>
+</div>

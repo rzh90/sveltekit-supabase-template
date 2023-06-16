@@ -6,6 +6,9 @@
 <script>
     import { invalidate } from "$app/navigation"
     import { onMount } from "svelte"
+    import "@skeletonlabs/skeleton/themes/theme-skeleton.css"
+    import "@skeletonlabs/skeleton/styles/skeleton.css"
+    import "../app.postcss"
 
     export let data
 
@@ -25,7 +28,7 @@
 </script>
 
 <svelte:head>
-    <title>SvelteKit + Supabase template with Skeleton UI</title>
+    <title>SvelteKit + Supabase template</title>
 </svelte:head>
 
 <slot />

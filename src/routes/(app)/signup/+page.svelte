@@ -13,39 +13,34 @@
     }
 </script>
 
-<section>
-    <div>
-        <h1>Sign up</h1>
+<section class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2 class="h2">Sign up</h2>
+    </div>
+
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         {#if form?.error}
-            <div>{form.error}</div>
+        <aside class="alert variant-filled-error">{form.error}</aside>
         {/if}
         {#if form?.message}
-            <div>{form.message}</div>
+            <aside class="alert variant-filled">{form.message}</aside>
         {/if}
-        <form method="post" use:enhance={handleSubmit}>
-            <div>
-                <label for="email">Email</label>
-                <p>
-                    <input id="email" name="email" value={form?.values?.email ?? ''} type="email" placeholder="Email" required />
-                </p>
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <p>
-                    <input id="password" name="password" type="password" placeholder="Password" required />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <button disabled={loading}>Sign up</button>
-                </p>
-            </div>
+
+        <form method="post" class="space-y-6" use:enhance={handleSubmit}>
+            <label class="label">
+                <span>Email</span>
+                <input id="email" name="email" value={form?.values?.email ?? ''} type="email" placeholder="Email" class="input" required>
+            </label>
+
+            <label class="label">
+                <span>Password</span>
+                <input id="password" name="password" type="password" placeholder="Password" class="input" required>
+            </label>
+            <div><button class="btn variant-filled-primary" disabled={loading}>Sign up</button></div>
         </form>
 
-        <div>
-            <p>
-                Already have an account? <a href="/signin">Sign in</a>
-            </p>
+        <div class="mt-6">
+            <p>Already have an account? <a href="/signin" class="anchor">Sign in</a></p>
         </div>
     </div>
 </section>
