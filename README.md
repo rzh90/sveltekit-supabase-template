@@ -21,7 +21,7 @@
 3. Click **Run**.
 
 ## Create the repo
-1. Clone the repo and open it in VS Code
+1. Clone the repo and open it in VS Code.
     1. Select **Use this template** > **Create a new repository** on this branch on GitHub.
     2. In VS Code, go to **Source Control** > **Clone Repository** > **Clone from GitHub** and select your new repository.
 2. Make a copy of the `.env.example` file in the root directory and rename it `.env`.
